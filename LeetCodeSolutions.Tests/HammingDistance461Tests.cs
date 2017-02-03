@@ -15,6 +15,7 @@ namespace LeetCodeSolutions.Tests
         }
 
         [Theory]
+        [InlineData(4, 2, 2)]
         [InlineData(1, 4, 2)]
         [InlineData(3, 1, 1)]
         public void HammingDistance_SmallNumbers_ReturnsCorrect(int x, int y, int expected)

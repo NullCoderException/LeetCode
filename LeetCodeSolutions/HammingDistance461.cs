@@ -10,7 +10,8 @@ namespace LeetCodeSolutions
     {
         public int HammingDistance(int x, int y)
         {
-            return HammingDistanceBruteForce(x, y);
+            //return HammingDistanceBruteForce(x, y);
+            return HammingDistanceBitwise(x, y);
         }
         /// <summary>
         /// Slow and ugly version using string comparison [ACCEPTED]
@@ -40,6 +41,18 @@ namespace LeetCodeSolutions
             return count;
         }
 
-        //TODO: find better solution using bitwise operators
+        /// <summary>
+        /// Partially bitwise implementation, much nicer but not faster [ACCEPTED]
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public int HammingDistanceBitwise(int x, int y)
+        {
+            //x XOR y, result to binary string
+            var result = Convert.ToString(x ^ y, 2);
+            int count = result.Where(c => c == '1').Count();
+            return count;
+        }
     }
 }
