@@ -22,9 +22,13 @@ namespace LeetCodeSolutions
             for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] == '0')
+                {
                     arr[i] = '1';
+                }
                 else if (arr[i] == '1')
+                {
                     arr[i] = '0';
+                }      
             }
             binaryStr = new string(arr);
             return Convert.ToInt32(new string(arr), 2);
