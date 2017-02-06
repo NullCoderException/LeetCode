@@ -14,6 +14,12 @@ namespace LeetCodeSolutions
             public ListNode(int x) { val = x; }
         }
 
+        /// <summary>
+        /// Accepted solution using node traversal and addition [ACCEPTED]
+        /// </summary>
+        /// <param name="l1"></param>
+        /// <param name="l2"></param>
+        /// <returns></returns>
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             ListNode l1temp = l1;
